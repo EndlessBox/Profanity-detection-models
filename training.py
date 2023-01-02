@@ -244,3 +244,19 @@ if __name__ == "__main__" :
     # y_pred = vot_soft.predict(X_eval)
 
     # print(accuracy_score(y_eval, y_pred))
+
+
+    """
+        Testing Voting again
+    """
+    # profanity_clean = pd.read_csv('./profanity_clean_with_ponctuation.csv')
+    # vectorizer_fd = open('./models/TFIDF_vectorizer.pickle', 'rb')
+    # vectorizer = pickle.load(vectorizer_fd)
+    # oversample = SMOTE()
+    # over_X, over_y = oversample.fit_resample(vectorizer.transform(profanity_clean.text), profanity_clean.profanity)
+    # X_train, X_eval, y_train, y_eval = train_test_split(over_X, over_y, test_size=0.25, random_state=1)
+    # classifier = pickle.load(open('./models/over_VotingClassifier.pickle', 'rb'))
+    # test = [("morons games filter")]
+    # test_vector = vectorizer.transform(test)
+    # the first is 0 and second is 1
+    # print(classifier.predict_proba(test_vector))
